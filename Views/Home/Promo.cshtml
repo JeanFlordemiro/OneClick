@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Promoções";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/promo.css">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<header> <!--Cabaçalho-->
+    <h1>OneClick</h1>
+    <p>Seu site de viagens favorito</p>
+
+    <nav> <!--Menu de navegação-->
+        <ul class="menu"> <!--Menu-->
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-controller="Home" asp-action="Promo">promoções</a></li>
+            <li><a href="#">Em Alta</a>
+                <ul>
+                    <li><a href="#">Europa</a></li>
+                    <li><a href="#">Ásia</a></li>
+                    <li><a href="#">Outros</a></li>
+                </ul>
+            </li>
+            <li><a href="#">D'Click</a></li>
+            <li><a asp-controller="Home" asp-action="Contato">Contato</a></li>
+            <li><a asp-controller="BdControlador" asp-action="Index">Agendar Viagem</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <br />
+
+    <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="~/css/img_edit/costa_rica.png" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title">Costa Rica</h5>
+                  <p class="card-text">Localizada na América Central, a Costa Rica é um destino com muitas belezas naturais. Por lá você e a sua família terão a oportunidade de se divertir nas praias, ficar perto de vulcões, tirar fotos em costões rochosos, ver as construções históricas em San Jose, a capital, e mesmo relaxar nos diversos resorts espalhados pelo país.</p>
+                  <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+                  <p>R$7.800,00</p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="~/css/img_edit/japao.png" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title">Japão</h5>
+                  <p class="card-text">Quem visita o Japão também deve reservar tempo para ver de perto as belas cerejeiras. A paisagem dessas árvores no Parque Ueno se tornou cartão-postal. Se o objetivo é fazer compras, explore Shibuya, região repleta de lojas e letreiros coloridos, e os bairros Ginza e os arredores da alameda Omotesando.</p>
+                  <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+                  <p>R$12.745,00</p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="~/css/img_edit/chile.png" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title">Chile</h5>
+                  <p class="card-text">Se você gosta de natureza, aposte em um pacote para a Patagônia Chilena. Com montanhas nevadas, lagos cristalinos e um visual de sonho, essa região selvagem vai te conquistar.É possível ainda comprar um pacote para Chile e Argentina, em que você conhece em uma só viagem esses dois países incríveis.</p>
+                  <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+                  <p>R$6.530,00</p>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="card-deck">
+              <div class="card">
+                <img class="card-img-top" src="~/css/img_edit/franca.png" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title">França</h5>
+                  <p class="card-text">Um dos destinos mais badalados e românticos do mundo, a capital da França atrai casais apaixonadas em busca da lua de mel perfeita, amantes de história e todos que não resistem ao charme francês. não deixe de ficar de olho nas nossas ofertas para aproveitar este destino incrível.</p>
+                  <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+                  <p>R$18.530,00</p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="~/css/img_edit/africa_sul.png" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title">Africa do Sul</h5>
+                  <p class="card-text">Comece sua viagem em Joanesburgo, a maior cidade da região. Por lá destaca-se o Museu do Apartheid, e Não deixe também de conhecer Port Elizabeth, cidade rodeada de praias. Outro atrativo é Cidade do Cabo, um lugar para se deslumbrar pelas montanhas, ilhas e praias paradisíacas.</p>
+                  <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+                  <p>R$11.700,00</p>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-img-top" src="~/css/img_edit/australia.png" alt="Imagem de capa do card">
+                <div class="card-body">
+                  <h5 class="card-title">Austrália</h5>
+                  <p class="card-text">Um país cheio de paisagens exóticas, cultura riquíssima, praias, montanhas e muita beleza natural. Esta é a Austrália, um destino cercado pelos oceanos Pacífico e Índico. Conheça Sydney, cidade das praias, vida noturna animada e dos grandes espetáculos.</p>
+                  <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+                  <p>R$16.920,00</p>
+                </div>
+              </div>
+            </div>
+</main>

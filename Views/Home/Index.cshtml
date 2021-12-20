@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "Início";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+
+<header> <!--Cabaçalho-->
+    <h1>OneClick</h1>
+    <p>Seu site de viagens favorito</p>
+
+    <nav> <!--Menu de navegação-->
+        <ul class="menu"> <!--Menu-->
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-controller="Home" asp-action="Promo">promoções</a></li>
+            <li><a href="#">Em Alta</a>
+                <ul>
+                    <li><a href="#">Europa</a></li>
+                    <li><a href="#">Ásia</a></li>
+                    <li><a href="#">Outros</a></li>
+                </ul>
+            </li>
+            <li><a href="#">D'Click</a></li>
+            <li><a asp-controller="Home" asp-action="Contato">Contato</a></li>
+            <li><a asp-controller="BdControlador" asp-action="Index">Agendar Viagem</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main> <!--Conteúdo principal do site-->
+    
+    <article> <!--Área de artigo-->
+        <div class="container">
+            <h1>
+                Viva toda a experiência
+            </h1>
+            <p>
+                Viajar com a OneClick é viajar com segurança, conforto e tranquilide por saber que tudo será preparado de ante-mão por nós, no intúito de te fornecer as melhores experiências da sua vida.
+            </p>
+        </div>
+        <img src="~/css/img_edit/viagem.jpg"/>
+    </article>
+    
+    <aside> <!--Sub sessão de artigo-->
+        <div class="container">
+            <h2>
+                Cuidamos dos minimos detalhes para você
+            </h2>
+            <p>
+                Não se preocupe com nada além de se divertir, e aproveite cada momento. Com a OnClick sua viagem começa antes do embarque.
+            </p>
+        </div>
+        <img src="~/css/img_edit/aeroporto.jpg"/>
+        <ul>
+            <li>
+                <h3>
+                    Preparamos tudo para sua viagem
+                </h3>
+                <p class="cor">
+                    Esqueçeu algo importante em casa? Roupas, acessórios, etc? Não se preocupe... passageiros da OneClick tem descontos exclusivos e direito a itens gratúitos nas lojas <a href="#">GoClick®</a>.
+                </p>
+            </li>
+            <li>
+                <h3>
+                    Te asseguramos contra roubo e furto
+                </h3>
+                <p class="cor">
+                    Recomendado para viagens <mark>internacionais</mark> e <mark>nacionais</mark>, o seguro viagem é sempre uma boa opção. Cliente OneClick tem direito a segurança e tranquilidade. Nosso serviço de seguro servirá para <mark style="background-color: brown; color: aliceblue;">emergências</mark> e qualquer outro inconveniente que possa surgir durante a sua viagem, além de proteger a sua bagagem em caso de perdas ou atrasos. Não há nada melhor do que viajar com tranquilidade, sabendo que, para qualquer imprevisto, você terá suporte de confiança.
+                </p>
+            </li>
+            <li>
+                <h3>
+                    Te recompensamos por viajar conosco
+                </h3>
+                <p class="cor">
+                    Cliente OneClick recebe o direito de se tornar membro do clube de vantagens <a href="#">D'Click®</a>, onde você poderá acumular pontos e trocar por voos, hospedagens e muitooooo mais!
+                </p>
+            </li>
+        </ul>
+    </aside>
+
+    <footer> <!--Rodapé-->
+        <p>
+            Desenvolvido por <strong>Jean Flordemiro</strong>
+        </p>
+    </footer>
+</main>

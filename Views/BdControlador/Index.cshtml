@@ -1,0 +1,90 @@
+﻿@model IEnumerable<OneClick.Models.Clientes>
+
+@{
+    ViewData["Title"] = "Agendar viagem";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<header> <!--Cabaçalho-->
+    <h1>OneClick</h1>
+    <p>Seu site de viagens favorito</p>
+
+    <nav> <!--Menu de navegação-->
+        <ul class="menu"> <!--Menu-->
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-controller="Home" asp-action="Promo">promoções</a></li>
+            <li><a href="#">Em Alta</a>
+                <ul>
+                    <li><a href="#">Europa</a></li>
+                    <li><a href="#">Ásia</a></li>
+                    <li><a href="#">Outros</a></li>
+                </ul>
+            </li>
+            <li><a href="#">D'Click</a></li>
+            <li><a asp-controller="Home" asp-action="Contato">Contato</a></li>
+            <li><a asp-controller="BdControlador" asp-action="Index">Agendar Viagem</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<h1>Vamos Viajar!</h1>
+
+<p>
+    <a asp-action="Create">Agendar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero_Voo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditCard)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero_Voo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreditCard)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

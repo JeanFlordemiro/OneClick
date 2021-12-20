@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Contato";
+    
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/contato.css">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<header> <!--Cabaçalho-->
+    <h1>OneClick</h1>
+    <p>Seu site de viagens favorito</p>
+
+    <nav> <!--Menu de navegação-->
+        <ul class="menu"> <!--Menu-->
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-controller="Home" asp-action="Promo">promoções</a></li>
+            <li><a href="#">Em Alta</a>
+                <ul>
+                    <li><a href="#">Europa</a></li>
+                    <li><a href="#">Ásia</a></li>
+                    <li><a href="#">Outros</a></li>
+                </ul>
+            </li>
+            <li><a href="#">D'Click</a></li>
+            <li><a asp-controller="Home" asp-action="Contato">Contato</a></li>
+            <li><a asp-controller="BdControlador" asp-action="Index">Agendar Viagem</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+      <artilce>
+        <aside>
+          <div class="container contact">
+              <div class="row">
+                  <div class="col-md-3">
+                      <div class="contact-info">
+                          <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
+                          <h2>Fale conosco</h2>
+                          <h4>Desejamos saber sua opnião.</h4>
+                      </div>
+                  </div>
+                  <div class="col-md-9">
+                      <div class="contact-form">
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="fname">Nome:</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="fname" placeholder="Digite seu nome" name="fname">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="lname">Sobrenome:</label>
+                            <div class="col-sm-10">
+                              <input type="text" class="form-control" id="lname" placeholder="Digite seu sobrenome" name="lname">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">Email:</label>
+                            <div class="col-sm-10">
+                              <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="control-label col-sm-2" for="comment">Assunto:</label>
+                            <div class="col-sm-10">
+                              <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                              <button type="submit" class="btn btn-default">Enviar</button>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </aside>
+      </artilce>
+    </main>
+    <footer> <!--Rodapé-->
+        <p>
+            Desenvolvido por <strong>Jean Flordemiro</strong>
+        </p>
+    </footer>
